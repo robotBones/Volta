@@ -1,0 +1,16 @@
+<div style="position: absolute; left: 0; top: 0; bottom: 0; right: 0; background-color: #f2f2f7; color: #000;">
+    <div style="height: 66px; background-color: #FFF; border-bottom: solid 0.5px #9b9b9b; display: flex; flex-direction: row">
+        <a href="http://voltawriter.com/" style="width: 66px;">
+            <img style="height: 100%;" src="/assets/images/writerboy-icon.svg" alt="volta" />
+        </a>
+        <span style="font-size: 24px; color: #4a4a4a; padding-left: 44px; align-self: center;">Created with <a href="http://voltawriter.com" style="color: #00db73">Volta</a></span>
+        <a style="font-size: 16px; color: #4a4a4a; position: absolute; right: 0; top: 0; padding-top: 20px; padding-right: 36px;" ng-href="/login">
+        	Sign In
+        </a>
+    </div>
+    <div style="width: 60%; margin-left: 20%; padding-top: 34px;">
+    	<h1 style="font-size: 32px; font-weight: bold;">{{chapter.title}}</h1>
+    	<p style="font-size: 20px; font-weight: 500;">by {{writer}}</p>
+    	<div style="font-size: 16px" ng-bind-html="chapter.body"></div>
+    </div>
+</div>

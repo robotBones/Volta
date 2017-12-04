@@ -1,0 +1,109 @@
+<div id="wrapper">
+	<!-- Header -->
+	<header></header>
+	<!-- Sidebar -->
+	<sidebar></sidebar>
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row dashboard-header">
+				<h1 class="page-header dashboard-title">{{firstName}}'s Dashboard</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h4 ng-show="noChapters">You have not yet created any documents.</h4>
+					<div ng-hide="noChapters" ng-switch="searching" class="row" style="margin: 0">
+						<div class="animate-switch" ng-switch-default>
+							<!-- infinite-scroll="getMoreData()" -->
+							<table ng-table="tableParams" class="table editable-table">
+								<tr ng-repeat="chapter in $data" ng-hide="chapter.inGarbage">
+									<td style="cursor: pointer" title="'Title'" data-sortable="'title'" ng-click="editOrGo(chapter._id)" ng-keyup="$event.keyCode !== 13 && editOrGo(chapter._id)">
+										<span style="display: block; line-height: 2rem;" class="chapter-title no-select" ng-show="edittingTitle !== chapter._id" sglclick="goToChapter(chapter._id)" ng-dblClick="editTitle(chapter)">
+                                    		{{chapter.title}}
+                                		</span>
+										<input ng-show="edittingTitle === chapter._id" id="inlineTitleEdit" focus-if="edittingTitle === chapter._id" ng-blur="updateTitle(chapter)" type="text" name="title" ng-model="edit.title" class="title" required/>
+										<!-- <div style="display: inline">
+											<span ng-if="edit !== chapter._id" ng-click="editTitle(chapter._id)">
+												<a>{{ chapter.title }}</a>
+											</span>
+											<input ng-keyup="$event.keyCode == 13 && updateTitle(chapter)" ng-if="edit === chapter._id" id="inlineTitleEdit" autofocus ng-blur="updateTitle(chapter)" type="text" name="title" ng-model="chapter.title" class="title" required/>
+										</div> -->
+									</td>
+									<td title="'Project'" data-sortable="'project.title'">
+										<a class="project-title" ng-href="/dashboard/projects/{{chapter.project._id}}">
+											{{ chapter.project.title || 'NA' }}
+										</a>
+									</td>
+									<td title="'Last Touched'" data-sortable="'updated_at'">
+										<span am-time-ago="chapter.updated_at"></span>
+									</td>
+									<td title="'Words'" data-sortable="'words'">
+										{{chapter.words}}
+									</td>
+									<td uib-dropdown on-toggle="showBg=!showBg" is-open="false">
+										<a class="tableLink" uib-dropdown-toggle>
+											<i class="fa fa-ellipsis-v"></i>
+										</a>
+										<!-- ng-click="open($index ,chapter._id, chapter.title)" -->
+										<ul uib-dropdown-menu aria-labelledby="chapter-options">
+											<li style="padding-bottom: 0px;">
+												<h4 style="padding-left: 20px; border-bottom: 1px solid rgb(221, 221, 221); padding-bottom: 6px; margin: 0px;">Move to...</h4>
+											</li>
+											<li>
+												<a ng-click="chapterNewProject(chapter._id)">
+													<i class="fa fa-plus"></i> New Project</a>
+											</li>
+											<md-divider></md-divider>
+											<li class="nav nav-stacked scrollable-nav">
+												<ul class="list-in-dropdown">
+													<li ng-repeat="project in projects">
+														<a ng-click="addToProject(chapter._id, project._id, $index)">
+															<i class="fa fa-folder"></i> {{project.title}}
+														</a>
+													</li>
+												</ul>
+											</li>
+											<md-divider></md-divider>
+											<li>
+												<a ng-click="deleteChapter(chapter._id)">
+													<i class="fa fa-trash"></i> Garbage
+												</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+							<!-- <h4 ng-show="loadingData" ng-hide="noMoreChapters" style="text-align: center; opacity: 0.5;">Loading...</h4>
+                            <h4 ng-show="noMoreChapters" style="text-align: center; opacity: 0.5;">No more chapters to load.</h4> -->
+						</div>
+						<div class="animate-switch" ng-switch-when="true">
+							<h4 ng-hide="gotMatch">No result for "{{query}}".</h4>
+							<table ng-table="searchTableParams" class="table editable-table" ng-show="gotMatch">
+								<tr ng-repeat="chapter in $data">
+									<td title="'Title'" data-sortable="'title'">
+										<a id="projectTitle" href="/dashboard/edit/{{chapter._id}}">
+											{{chapter.title}}
+										</a>
+									</td>
+									<td title="'Search Result'" data-sortable="'project.title'">
+										<a id="projectTitle" href="/dashboard/edit/{{chapter._id}}" ng-bind-html="chapter.result"></a>
+									</td>
+									<td title="'Last Touched'" data-sortable="'updated_at'">
+										<span am-time-ago="chapter.updated_at"></span>
+									</td>
+									<td title="''">
+										<a class="tableLink" href="" ng-click="open($index ,chapter._id, chapter.title)">
+											<i class="fa fa-ellipsis-v"></i>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

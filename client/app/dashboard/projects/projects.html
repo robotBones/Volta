@@ -1,0 +1,93 @@
+<div id="wrapper">
+	<!-- Header -->
+	<header></header>
+	<!-- <div id="header-wrapper">
+        <ul>
+            <li>
+                <div class="search">
+                    <input ng-show="opened" placeholder="Search" focus-if="opened" focus-delay="100" type="text" ng-model="query">
+                    <a ng-click="toggleSearch()">
+                        <i ng-class="{'vi-search': opened === false, 'vi-close': opened === true}"></i>
+                        <md-tooltip md-direction="bottom">Search</md-tooltip>
+                    </a>
+                </div>
+            </li>
+            <li><a href=""><i class="vi-publications"></i><md-tooltip md-direction="bottom">Publish</md-tooltip></a></li>
+            <li><a ng-click="settings()"><i class="vi-user"></i><md-tooltip md-direction="bottom">User</md-tooltip></a></li>
+            <li><a href="/logout" style="padding-right: 58px;"><i class="fa fa-power-off"></i><md-tooltip md-direction="bottom">Logout</md-tooltip></a></li>
+        </ul>
+    </div> -->
+	<!-- Sidebar -->
+	<sidebar></sidebar>
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row dashboard-header">
+				<h1 class="page-header dashboard-title">{{firstName}}'s Projects</h1>
+			</div>
+			<div class="row">
+				<div class="">
+					<div class="col-md-3">
+						<div class="panel panel-writerboy">
+							<div class="panel-body">
+								<p>New Project</p>
+							</div>
+							<div class="panel-footer">
+								<a href="" ng-click="newProject()"><i class="fa fa-2x fa-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					<div ng-repeat="project in projects" class="col-md-3">
+						<div class="panel panel-writerboy" sglclick="goToTheProject(project._id)" ng-dblClick="editProjectTitle(project)">
+							<div class="panel-header">
+								<a ng-click="delete($index)" class="pull-right">
+									<i style="font-size: 10px; padding: 6px;" class="vi-close"></i>
+								</a>
+							</div>
+							<div class="panel-body">
+								<p ng-show="edittingTitle !== project._id">{{ project.title }}</p>
+								<input ng-keyup="$event.keyCode == 13 && updateProjectTitle(project)" focus-if="edittingTitle === project._id" ng-show="edittingTitle === project._id" id="inlineTitleEdit" autofocus ng-blur="updateProjectTitle(project)" type="text" name="title" ng-model="edit.title" class="title" />
+							</div>
+							<div class="panel-footer">
+								<a>
+									<i style="font-size: 2rem;" class="vi-folder-open"></i>
+								</a>
+							</div>
+						</div>
+						<!-- <div class="panel panel-writerboy">
+                            <div class="panel-body">
+                                <p ng-click="editTitle(project._id)" ng-if="edit !== project._id">{{ project.title }}</p>
+                                <input ng-keyup="$event.keyCode == 13 && updateTitle(project)" ng-if="edit === project._id" id="inlineTitleEdit" autofocus ng-blur="updateTitle(project)" type="text" name="title" ng-model="project.title" class="title" />
+                            </div>
+                            <div class="panel-footer">
+                                <a ng-href="/dashboard/projects/{{project._id}}"><i class="fa-2x fa fa-folder-open"></i></a>
+                            </div>
+                        </div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<script type="text/ng-template" id="actionPopoverTemplate.html">
+	<div>
+		<div class="row">
+			<a class="tableLink" href=""><i class="fa fa-plus"></i> New Project</a>
+		</div>
+		<div class="row">
+			<a class="tableLink" href=""><i class="fa fa-book"></i> Taco Bell</a>
+		</div>
+		<div class="row">
+			<a class="tableLink" href=""><i class="fa fa-book"></i> Pride and Prejudice</a>
+		</div>
+		<uib-accordion close-others="oneAtATime">
+			<uib-accordion-group heading="Download" is-open="false" is-disabled="false">
+			</uib-accordion-group>
+			<uib-accordion-group heading='Garbage' is-open="false">
+			</uib-accordion-group>
+			</uib-accordian>
+	</div>
+</script>

@@ -1,0 +1,125 @@
+<div id="wrapper">
+	<!-- Header -->
+	<header></header>
+	<nav class="secondary-nav" ng-class="{'show': showVerifyMessage}">
+		<ul>
+			<li><a ng-click="newChapter()">NEW CHAPTER</a></li>
+			<li><a type="file" ngf-select="uploadFile($file, $invalidFiles)" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document, text/plain">UPLOAD CHAPTER</a></li>
+			<!-- <li><a>DOWNLOAD PROJECT</a></li>
+            <li><a>PUBLISH PROJECT</a></li>
+            <li><a>PROJECT INFO</a></li> -->
+		</ul>
+	</nav>
+	<!-- Sidebar -->
+	<sidebar></sidebar>
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row dashboard-header" style="border: none;">
+				<h1 class="page-header dashboard-title">
+                	<span ng-if="!edittingTitle">
+                		{{ project.title }} 
+                	</span>
+            	    <input ng-if="edittingTitle" ng-keyup="$event.keyCode == 13 && updateTitle()" id="inlineProjectTitleEdit" autofocus ng-blur="updateTitle()" type="text" name="title" ng-model="project.title" class="title" required />
+                	<span uib-dropdown is-open="false" auto-close="outsideClick">
+                		<a uib-dropdown-toggle><i class="vi-down-open"></i></a>
+                		<ul style="left: 12px; top: 26px;" uib-dropdown-menu aria-labelledby="project-options">
+                		    <li>
+                		        <a ng-click="editTitle()">Rename Project</a>
+                		    </li>
+                		    <li>
+                		       <a class="not-active">Publish Preview<md-tooltip md-direction="right">Coming Soon</md-tooltip></a> 
+                		    </li>
+                		    <li>
+                		       <a class="not-active"><md-switch ng-model="data.cb1" aria-label="Public">Public<md-tooltip md-direction="right">Coming Soon</md-tooltip></md-switch></a>
+                		    </li>
+                		    <li>
+                		       <a class="not-active">Copy Project URL<md-tooltip md-direction="right">Coming Soon</md-tooltip></a> 
+                		    </li>
+                		    <md-divider></md-divider>
+                		    <li>
+                		        <a ng-click="deleteProject()">Delete Project</a>
+                		    </li>
+                		</ul>
+                	</span>
+                </h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<h4 ng-show="noChapters">This project doesn't have any chapters right now.</h4>
+					<div style="margin: 0" ng-hide="noChapters" class="row" ng-switch="searching">
+						<div ng-switch-default>
+							<table ng-table="tableParams" class="table project-table">
+								<tr ng-repeat="chapter in $data">
+									<td title="'Title'" filter="{ title: 'text'}" data-sortable="'title'">
+										<span style="display: block; line-height: 2rem;" class="chapter-title no-select" ng-show="edittingChapterTitle !== chapter._id" sglclick="goToChapter(chapter._id)" ng-dblClick="editChapterTitle(chapter)">
+                                    		{{chapter.title}}
+                                		</span>
+										<input ng-show="edittingChapterTitle === chapter._id" id="inlineTitleEdit" focus-if="edittingChapterTitle === chapter._id" ng-blur="updateChapterTitle(chapter)" type="text" name="title" ng-model="editChapter.title" class="title" required/>
+										<!-- <a id="projectTitle" class="project-title">
+                        	                {{ chapter.title }}
+                        	            </a> -->
+									</td>
+									<td title="'Last Touched'" data-sortable="'updated_at'" ng-click="editChapter(chapter._id)">
+										<span am-time-ago="chapter.updated_at"></span>
+									</td>
+									<td title="'Words'" data-sortable="'words'" ng-click="editChapter(chapter._id)">
+										{{ chapter.words }}
+									</td>
+									<td uib-dropdown is-open="false">
+										<a class="tableLink" uib-dropdown-toggle><i class="fa fa-ellipsis-v"></i></a>
+										<!-- ng-click="open($index ,chapter._id, chapter.title)" -->
+										<ul uib-dropdown-menu aria-labelledby="chapter-options">
+											<li style="padding-bottom: 0px;">
+												<h4 style="padding-left: 20px; border-bottom: 1px solid rgb(221, 221, 221); padding-bottom: 6px; margin: 0px;">Move to...</h4>
+											</li>
+											<li>
+												<a ng-click="chapterNewProject(chapter._id)"><i class="fa fa-plus"></i> New Project</a>
+											</li>
+											<md-divider></md-divider>
+											<li class="nav nav-stacked scrollable-nav">
+												<ul class="list-in-dropdown">
+													<li ng-repeat="proj in projects" ng-if="project._id !== proj._id">
+														<a ng-click="addToProject(chapter._id, proj._id, $index)"><i class="fa fa-folder"></i> {{proj.title}}</a>
+													</li>
+												</ul>
+											</li>
+											<md-divider></md-divider>
+											<li>
+												<a ng-click="deleteChapter(chapter._id)"><i class="fa fa-trash"></i> Garbage</a>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div ng-switch-when="true">
+							<h4 ng-hide="gotMatch">No result for "{{query}}".</h4>
+							<table ng-table="searchTableParams" class="table editable-table" ng-show="gotMatch">
+								<tr ng-repeat="chapter in $data">
+									<td title="'Title'" data-sortable="'title'">
+										<a id="projectTitle" href="/dashboard/edit/{{chapter._id}}">
+                                            {{chapter.title}}
+                                        </a>
+									</td>
+									<td title="'Search Result'" data-sortable="'project.title'">
+										<a id="projectTitle" href="/dashboard/edit/{{chapter._id}}" ng-bind-html="chapter.result">
+										</a>
+									</td>
+									<td title="'Last Touched'" data-sortable="'updated_at'">
+										<span am-time-ago="chapter.updated_at"></span>
+									</td>
+									<td title="''">
+										<a class="tableLink" href="" ng-click="open($index ,chapter._id, chapter.title)"><i class="fa fa-ellipsis-v"></i></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

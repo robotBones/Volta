@@ -1,0 +1,42 @@
+<signupnavbar></signupnavbar>
+<div class="container">
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+            <div class="text-center" style="padding-bottom:20px;">
+                <h2>Sign in to Volta</h2>
+                <h3>No Account? <a style="color: #2ecc71" href="/signup">Sign up!</a> It's free!</h3>
+            </div>
+            <form role="form" name="form" ng-submit="login(form)" novalidate>
+                <fieldset>
+                    <div class="form-group">
+                        <md-input-container class="md-block flex-gt-sm">
+                            <label>Email</label>
+                            <input type="email" ng-model="user.email" required>
+                        </md-input-container>
+                    </div>
+                    <div class="form-group">
+                        <md-input-container class="md-block flex-gt-sm">
+                            <label>Password</label>
+                            <input type="password" ng-model="user.password" required autocomplete="off">
+                        </md-input-container>
+                    </div>
+                    <div class="form-group has-error">
+                        <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+                            Please enter your email and password.
+                        </p>
+                        <p class="help-block" ng-show="form.email.$error.email && submitted">
+                            Please enter a valid email.
+                        </p>
+                        <p class="help-block">{{ errors.other }}</p>
+                        <div>
+                            <a href="/forgot-pass" class="forgotLink pull-left">Forget Something?</a>
+                            <button ladda="loading" data-style="slide-right" class="btn btn-primary btn-lg btn-signin pull-right" type="submit">
+                                Sign in
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

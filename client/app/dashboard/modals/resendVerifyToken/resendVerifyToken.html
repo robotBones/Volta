@@ -1,0 +1,20 @@
+<div class="modal-header">
+  <h3 id="navModalHead" class="modal-title">Verification Failed</h3>
+  <span flex></span>
+  <md-button class="md-icon-button modal-close" ng-click="cancel()">
+    <md-icon class="fa fa-times" aria-label="Close dialog"></md-icon>
+  </md-button>
+</div>
+<form class="form-horizontal">
+  <div class="modal-body">
+    <div class="">
+      <div class="col-sm-12">
+        <p style="color: #000">Please click <a ng-click="sendToken()" style="color: #2ecc71">here</a> to send the verification link again.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <!-- <button class="btn btn-lg btn-default" ng-click="cancel()">Cancel</button> -->
+    <button class="btn btn-lg btn-text" ng-click="cancel()">Cancel</button>
+  </div>
+</form>

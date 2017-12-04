@@ -1,0 +1,27 @@
+<div class="modal-header">
+	<h3 id="navModalHead" class="modal-title">Download</h3>
+	<span flex></span>
+	<md-button class="md-icon-button modal-close" ng-click="cancel()">
+		<md-icon class="fa fa-times" aria-label="Close dialog"></md-icon>
+	</md-button>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-sm-12">
+			<ul class="nav nav-pills nav-stacked">
+				<li>
+					<a ng-click="cancel()" download="{{txtFileName}}" ng-href="{{txtUrl}}">Plain Text (.txt)</a>
+				</li>
+				<li>
+					<a ng-click="cancel()" download="{{docxFileName}}" ng-href="{{docxUrl}}">Microsoft Word (.docx)</a>
+				</li>
+				<li>
+					<a ng-click="downloadPdf()">Adobe Document (.pdf)</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-lg btn-close" ng-click="cancel()">Close</button>
+</div>

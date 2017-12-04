@@ -1,0 +1,23 @@
+<div class="modal-header">
+	<h3 id="navModalHead" class="modal-title">Share Document</h3>
+	<span flex></span>
+	<md-button class="md-icon-button modal-close" ng-click="cancel()">
+		<md-icon class="fa fa-times" aria-label="Close dialog"></md-icon>
+	</md-button>
+</div>
+<form class="form-horizontal" ng-submit="share()">
+    <div class="modal-body">
+        <div class="">
+            <div class="col-sm-12">
+                <md-input-container id="modal" class="md-block flex-gt-sm" style="margin-bottom: 0px;">
+                    <label>Enter Email(s)</label>
+                    <input type="text" ng-model="emails.emails">
+                </md-input-container>
+                <p style="font-size: 12px; color: #9b9b9b">Recipient(s) may not edit this document and only leave comments if they have a Volta Account.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-lg btn-text" type="submit">Share</button>
+    </div>
+</form>

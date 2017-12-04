@@ -1,0 +1,28 @@
+<div class="main-menu navbar navbar-inverse navbar-static-top" ng-controller="NavbarCtrl">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a style="padding-left: 40px;" href="http://voltawriter.com/" class="navbar-brand">
+				<img src="/assets/images/volta.png" alt="volta" />
+			</a>
+		</div>
+		<div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
+			<ul class="nav navbar-nav navbar-right">
+				<li ng-hide="isLoggedIn()" style="padding-right: 30px;">
+					<a ng-show="inLogin" id="signin" href="/signup"><i class="fa fa-user-plus"></i> SIGN UP</a>
+					<a ng-hide="inLogin" id="signin" href="/login"><i class="fa fa-pencil"></i> SIGN IN</a>
+				</li>
+				<li ng-show="isLoggedIn()">
+					<p class="navbar-text">Hello {{ getCurrentUser().firstName }}</p>
+				</li>
+				<!-- <li ng-show="isLoggedIn()" ng-class="{active: isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li> -->
+				<li ng-show="isLoggedIn()"><a href="/logout">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

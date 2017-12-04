@@ -1,0 +1,83 @@
+#header-wrapper.show {
+	height: 104px;
+}
+.verify-message {
+	margin          : 0;
+	line-height     : 36px;
+	text-align      : center;
+	background-color: #222222;
+	display         : none;
+	p {
+		margin: 0;
+	}
+}
+.verify-message.show {
+	display: block;
+}
+#header-wrapper {
+	height          : 68px;
+	width           : 100%;
+	background-color: #000;
+	box-shadow      : 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	transition      : all 0.5s ease;
+	position        : fixed;
+	left            : 0;
+	top             : 0;
+	z-index         : 1;
+	ul {
+		list-style: none;
+		text-align: right;
+		li {
+			display  : inline-block;
+			padding  : 0 16px;
+			font-size: 20px;
+			a {
+				display    : block;
+				line-height: 64px;
+				width      : 40px;
+				text-align : center;
+				color      : #eeeeee;
+			}
+			a:focus {
+				color: #eeeeee;
+			}
+			a:hover {
+				color: #2ecc71;
+			}
+			.search {
+				display: inline-block;
+				input {
+					-webkit-transition: all 0.5s ease;
+					-moz-transition   : all 0.5s ease;
+					-o-transition     : all 0.5s ease;
+					transition        : all 0.5s ease;
+					font-size         : 14px;
+					padding           : 4px;
+					border            : medium none;
+					border-radius     : 2px;
+					background-color  : #333333;
+					border            : medium none;
+					height            : 100%;
+				}
+				input.ng-hide {
+					width  : 0;
+					padding: 4px 0;
+				}
+				input.ng-show {
+					width  : 240px;
+					padding: 4px;
+				}
+				a {
+					font-size: 20px;
+					display  : inline-block;
+					i {
+						-webkit-transition: all 0.5s ease;
+						-moz-transition   : all 0.5s ease;
+						-o-transition     : all 0.5s ease;
+						transition        : all 0.5s ease;
+					}
+				}
+			}
+		}
+	}
+}

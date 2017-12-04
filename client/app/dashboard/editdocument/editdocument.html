@@ -1,0 +1,49 @@
+<div id="wrapper" style="padding-top: 0px;">
+    <!-- Sidebar -->
+    <sidebar></sidebar>
+    <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div class="container-fluid editor-container bg-default">
+        <!-- Secondary Toolbar for now -->
+        <div class="row">
+            <!-- <div class="container-fluid"> -->
+            <div class="save-message">{{saveMessage}}</div>
+            <ng-quill-editor theme="snow" ng-model="body" toolbar="true" link-tooltip="true" image-tooltip="true" toolbar-entries="font size bold list bullet italic underline strike align link" editor-required="true" required="" error-class="input-error" ng-keyup="toggleMenus($event)"></ng-quill-editor>
+            <!-- </div> -->
+            <!-- <hr> -->
+        </div>
+        <div id="editorbottom" class="row">
+            <br />
+            <div class="col-md-2">
+                <a class="btmbtn default" ng-click="openDownloadModal()"><i class="fa fa-lg fa-download"></i></a>
+                <a class="btmbtn default" ng-click="print()"><i class="fa fa-lg fa-print"></i><md-tooltip md-direction="top">Coming Soon</md-tooltip></a>
+                <span uib-dropdown is-open="false" auto-close="always">
+            		<a uib-dropdown-toggle class="btmbtn default" href=""><i class="fa fa-lg fa-share-alt"></i></a>
+            		<ul style="left: 12px; bottom: 26px; top: -206px;" uib-dropdown-menu aria-labelledby="project-options">
+            		    <li>
+            		        <a ng-click="openShareModal()">Share Document</a>
+            		    </li>
+            		    <li>
+            		       <a class="not-active">Publish Preview<md-tooltip md-direction="right">Coming Soon</md-tooltip></a> 
+            		    </li>
+            		    <li>
+            		       <a class="not-active"><md-switch ng-model="data.cb1" aria-label="Public">Public<md-tooltip md-direction="right">Coming Soon</md-tooltip></md-switch></a>
+            		    </li>
+            		    <li>
+            		       <a class="not-active">Copy Document URL<md-tooltip md-direction="right">Coming Soon</md-tooltip></a> 
+            		    </li>
+            		</ul>
+            	</span>
+            </div>
+            <div class="col-md-8">
+                <h3 class="title default text-center" id="titleText" ng-click="edit(true)" ng-class="{'hidden': editTitle}">{{ title }}</h3>
+                <input style="margin-top: 0px;" focus-if="editTitle" class="title text-center" type="text" id="editTitleText" ng-class="{'hidden': !editTitle}" ng-blur="edit(false)" ng-model="title" />
+            </div>
+            <div class="col-md-2">
+                <h3 id="counter" class="counter default pull-right">{{ words }}</h3>
+            </div>
+        </div>
+        <!-- <div class="row">          </div> -->
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>

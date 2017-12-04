@@ -1,0 +1,78 @@
+<div id="sidebar-wrapper" ng-class="{'show': showVerifyMessage, 'with-logo': inEditor}">
+	<ul class="sidebar-nav">
+		<li class="sidebar-brand">
+			<a style="cursor: inherit;">
+				<img style="width: 100%" src="/assets/images/writerboy-icon.svg"/>
+			</a>
+		</li>
+		<li style="padding-top: 24px;">
+			<a href="/dashboard/">
+				<i class="vi-dashboard"></i>
+				<md-tooltip md-direction="right">
+					Dashboard
+				</md-tooltip>
+			</a>
+		</li>
+		<li>
+			<a ng-click="newChapter()">
+				<i class="vi-doc"></i>
+				<md-tooltip md-direction="right">
+					New Document
+				</md-tooltip>
+			</a>
+		</li>
+		<li>
+			<a type="file" ngf-select="uploadFile($file, $invalidFiles)" accept="application/vnd.openxmlformats-officedocument.wordprocessingml.document, text/plain">
+				<i style="margin-left: -3px;" class="vi-cloud-upload-1"></i>
+				<md-tooltip md-direction="right">
+					Upload Document
+				</md-tooltip>
+			</a>
+		</li>
+		<li>
+			<a href="" ng-click="newProject()">
+				<i class="vi-folder-empty"></i>
+				<md-tooltip md-direction="right">
+					New Project
+				</md-tooltip>
+			</a>
+		</li>
+		<li>
+			<a href="/dashboard/projects">
+				<i style="font-size: 16px; margin-left: -5px;" class="vi-folders"></i>
+				<md-tooltip md-direction="right">
+					Projects
+				</md-tooltip>
+			</a>
+		</li>
+		<li>
+			<a href="/dashboard/garbage">
+				<i class=" vi-garbage"></i>
+				<md-tooltip md-direction="right">
+					Garbage
+				</md-tooltip>
+			</a>
+		</li>
+		<!-- <li>
+            <a href="#" ng-click="settings()"><i class="fa fa-user"></i>
+              <md-tooltip md-direction="right">
+                Settings
+               </md-tooltip>
+            </a>
+        </li>
+        <li>
+            <a href="/logout"><i class="fa fa-power-off"></i>
+              <md-tooltip md-direction="right">
+                Logout
+               </md-tooltip>
+            </a>
+        </li>
+        <li id="bugli">
+            <a href="#" ng-click="reportAbug()"><i class="fa fa-bug"></i>
+              <md-tooltip md-direction="right">
+                Report a bug
+               </md-tooltip>
+            </a>
+        </li> -->
+	</ul>
+</div>

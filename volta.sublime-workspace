@@ -1,0 +1,732 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"not",
+				"NOT_FOUND"
+			],
+			[
+				"over",
+				"overflow-y"
+			],
+			[
+				"title",
+				"titleAt"
+			],
+			[
+				"titlere",
+				"titleReplaced"
+			],
+			[
+				"index",
+				"indexOf"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"chapt",
+				"noChapters"
+			],
+			[
+				"chapter",
+				"chapterId"
+			],
+			[
+				"ql-for",
+				"ql-format-group"
+			],
+			[
+				"down",
+				"downloadData"
+			],
+			[
+				"do",
+				"docxBlob"
+			],
+			[
+				"ac",
+				"actionwithIndex"
+			],
+			[
+				"model",
+				"modelName"
+			],
+			[
+				"remo",
+				"removeClasses"
+			],
+			[
+				"sidebar",
+				"sidebar-brand"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"resp",
+				"response"
+			],
+			[
+				"content",
+				"content-container"
+			],
+			[
+				"t",
+				"tObject"
+			],
+			[
+				"get",
+				"getData"
+			],
+			[
+				"in",
+				"inlineTitleEdit"
+			],
+			[
+				"remve",
+				"removeClass"
+			],
+			[
+				"remove",
+				"removeClass"
+			],
+			[
+				"tech",
+				"technicians"
+			],
+			[
+				"machine",
+				"machineId"
+			],
+			[
+				"err",
+				"error"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "client/app/shareView/shareView.controller.js",
+			"settings":
+			{
+				"buffer_size": 1017,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/app/shareView/shareView.html",
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server/api/chapter/chapter.controller.js",
+			"settings":
+			{
+				"buffer_size": 8058,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 69.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"gitst",
+				"Git: Show Tags"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 349.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) ",
+			" import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/epic/dev/web/Volta",
+		"/home/epic/dev/web/Volta/client",
+		"/home/epic/dev/web/Volta/client/app",
+		"/home/epic/dev/web/Volta/client/app/dashboard/editdocument",
+		"/home/epic/dev/web/Volta/client/assets/images",
+		"/home/epic/dev/web/Volta/client/components",
+		"/home/epic/dev/web/Volta/client/components/auth",
+		"/home/epic/dev/web/Volta/server",
+		"/home/epic/dev/web/Volta/server/api",
+		"/home/epic/dev/web/Volta/server/api/chapter",
+		"/home/epic/dev/web/Volta/server/api/user"
+	],
+	"file_history":
+	[
+		"/home/epic/dev/web/Volta/client/app/dashboard/editdocument/editdocument.html",
+		"/home/epic/dev/web/Volta/server/api/shareDoc/shareDoc.controller.js",
+		"/home/epic/dev/web/Volta/server/api/chapter/chapter.controller.js",
+		"/home/epic/dev/web/Volta/server/api/chapter/index.js",
+		"/home/epic/dev/web/Volta/client/app/shareView/shareView.js",
+		"/home/epic/dev/web/Volta/dist/server/api/forgot/forgot.controller.js",
+		"/home/epic/dev/web/Volta/dist/server/api/user/user.controller.js",
+		"/home/epic/dev/web/Volta/server/api/forgot/forgot.controller.js",
+		"/home/epic/dev/web/Volta/server/api/user/user.controller.js",
+		"/home/epic/dev/web/Volta/client/app/shareView/shareView.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/shareDoc/shareDoc.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/editdocument/editdocument.controller.js",
+		"/home/epic/Untitled Document",
+		"/home/epic/Shared Folder/text.txt",
+		"/home/epic/dev/web/Volta/server/api/chapter/chapter.model.js",
+		"/home/epic/dev/web/Volta/server/api/user/index.js",
+		"/home/epic/Desktop/fyp talk with ali",
+		"/home/epic/dev/web/Volta/server/api/shareDoc/index.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/shareDoc/shareDoc.html",
+		"/home/epic/dev/web/Volta/client/app/account/signup/signup.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/downloadModal/downloadModal.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/dashboard.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projects.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/dashboard.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projects.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/downloadModal/downloadModal.html",
+		"/home/epic/dev/web/Volta/client/components/signupnavbar/signupnavbar.html",
+		"/home/epic/dev/web/Volta/client/components/navbar/navbar.html",
+		"/home/epic/dev/web/Volta/client/app/app.js",
+		"/home/epic/dev/web/Volta/client/app/analytics/analytics.html",
+		"/home/epic/dev/web/Volta/client/app/analytics/analytics.controller.js",
+		"/home/epic/dev/web/Volta/client/app/account/login/login.html",
+		"/home/epic/dev/web/Volta/client/app/main/main.less",
+		"/home/epic/dev/web/Volta/client/app/account/login/login.controller.js",
+		"/home/epic/dev/web/Volta/server/config/seed.js",
+		"/home/epic/dev/web/Volta/client/app/analytics/analytics.js",
+		"/home/epic/dev/web/Volta/client/components/sidebar/sidebar.controller.js",
+		"/home/epic/dev/web/Volta/server/api/upload/upload.controller.js",
+		"/home/epic/dev/web/Volta/Gruntfile.js",
+		"/home/epic/dev/web/Volta/client/index.html",
+		"/home/epic/dev/web/Volta/client/assets/base64.js",
+		"/home/epic/dev/web/Volta/client/assets/docx.js",
+		"/home/epic/dev/web/Volta/client/assets/jszip.js",
+		"/home/epic/dev/new-horizons/jsPDF/examples/basic.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/editdocument/editdocument.less",
+		"/home/epic/dev/web/Volta/client/assets/ng-quill.js",
+		"/home/epic/dev/web/Volta/client/assets/pdf.js",
+		"/home/epic/dev/new-horizons/jsPDF/dist/jspdf.min.js",
+		"/home/epic/dev/web/pdf.js",
+		"/home/epic/dev/web/Volta/server/app.js",
+		"/home/epic/dev/new-horizons/jsPDF/dist/jspdf.debug.js",
+		"/home/epic/dev/web/Volta/client/components/header/header.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projectdashboard/projectdashboard.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projects.less",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projectdashboard/projectdashboard.less",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projectdashboard/projectdashboard.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/settings/settings.html",
+		"/home/epic/dev/web/Volta/client/components/signupnavbar/signupnavbar.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/modals.less",
+		"/home/epic/dev/web/Volta/client/app/dashboard/verifyEmail/verifyEmail.controller.js",
+		"/home/epic/dev/web/Volta/server/api/user/user.integration.js",
+		"/home/epic/Desktop/stemmercode.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Postfix_Rule array.txt",
+		"/home/epic/Downloads/Document.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Add_Yey_Hay.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Add_Yey.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Add_Tay.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Add_Alif.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Add_Hay.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Postfix_Rule_Exception.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Prefix_Exception.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Postfix_Exception.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Prefix_Rule.txt",
+		"/home/epic/Desktop/Watermark Dictionary/Postfix_Rule.txt",
+		"/home/epic/Downloads/Stemmer_v1.0/For Code Files/Processing.txt",
+		"/home/epic/dev/web/Volta/server/auth/auth.service.js",
+		"/home/epic/dev/web/Volta/client/app/app.less",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/newProject/newProjectModal.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/newProject/newProjectModal.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/dashboard.less",
+		"/home/epic/dev/web/Volta/client/assets/quill.js",
+		"/home/epic/dev/web/Volta/client/app/account/signup/signup.html",
+		"/home/epic/dev/web/Volta/client/components/sidebar/sidebar.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/quill.snow.less",
+		"/home/epic/dev/web/Volta/server/api/user/user.model.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/redirect/redirect.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/redirect/redirect.controller.js",
+		"/home/epic/dev/web/Volta/client/app/garbage/garbage.html",
+		"/home/epic/dev/web/Volta/server/api/project/project.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/redirect/redirect.html",
+		"/home/epic/dev/web/Volta/client/bower_components/quill/dist/quill.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/garbageAction/cleanGarbageModal.controller.js",
+		"/home/epic/dev/web/Volta/client/components/header/header.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/settings/settings.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/garbageAction/cleanGarbageModal.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/settings/settingsmodal.controller.spec.js",
+		"/home/epic/dev/web/Volta/client/components/header/header.directive.js",
+		"/home/epic/dev/web/Volta/client/app/garbage/garbage.controller.js",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/moveChapterModal.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/moveChapterModal.controller.js",
+		"/home/epic/dev/web/Volta/client/assets/html-docx.js",
+		"/home/epic/Downloads/voltacons/voltacons/demo.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/projects/projectdashboard/projectdashboard.js",
+		"/home/epic/dev/web/Volta/client/components/header/header.less",
+		"/home/epic/dev/web/Volta/client/app/main/main.controller.js",
+		"/home/epic/dev/web/Volta/client/components/sidebar/sidebar.less",
+		"/home/epic/Downloads/voltacons/voltacons/css/voltacons.css",
+		"/home/epic/dev/web/Volta/client/app/account/forgot-pass/forgot-pass.controller.js",
+		"/home/epic/dev/web/Volta/client/app/searchbar/searchbar.directive.js",
+		"/home/epic/Downloads/fontello-101ea207/demo.html",
+		"/home/epic/dev/web/Volta/client/app/main/main.html",
+		"/home/epic/dev/web/Volta/client/components/header/header.directive.spec.js",
+		"/home/epic/dev/web/Volta/client/components/header/header.controller.spec.js",
+		"/home/epic/dev/web/Volta/server/api/project/project.model.js",
+		"/home/epic/dev/web/Volta/client/components/socket/socket.service.js",
+		"/home/epic/dev/web/Volta/client/components/auth/auth.service.js",
+		"/home/epic/dev/web/Volta/server/auth/local/passport.js",
+		"/home/epic/dev/web/Volta/client/app/account/forgot-pass/forgot-pass.less",
+		"/home/epic/dev/web/Volta/client/app/account/reset-pass/reset-pass.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/newdocument/newdocument.controller.js",
+		"/home/epic/dev/web/Volta/server/api/forgot/index.js",
+		"/home/epic/dev/web/Volta/client/app/account/reset-pass/reset-pass.js",
+		"/home/epic/dev/web/Volta/client/app/account/reset-pass/reset-pass.controller.js",
+		"/home/epic/dev/web/Volta/client/app/account/forgot-pass/forgot-pass.html",
+		"/home/epic/dev/web/Volta/client/app/account/forgot-pass/forgot-pass.js",
+		"/home/epic/dev/web/Volta/client/app/account/settings/settings.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/newdocument/newdocument.html",
+		"/home/epic/dev/web/Volta/client/app/dashboard/modals/garbageAction/garbageActionModal.html"
+	],
+	"find":
+	{
+		"height": 55.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/home/epic/dev/web/Volta",
+			"/home/epic/dev/web/Volta/client/app",
+			"/home/epic/dev/web/Volta/client/components",
+			"/home/epic/dev/web/Volta/client/app",
+			"/home/epic/dev/web/Volta/dist",
+			"/home/epic/dev/web/Volta/server",
+			"/home/epic/dev/web/Volta/client/components",
+			"/home/epic/dev/web/Volta/client/assets",
+			"/home/epic/dev/web/Volta/client/app",
+			"/home/epic/dev/web/Volta/client",
+			"/home/epic/dev/web/Volta/client/app",
+			"/home/epic/dev/web/Volta/client"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"7MI_ClfWxAxYrHzeomxkEA",
+			"solata",
+			"pdf",
+			"-cog",
+			".btn-signin:hover",
+			"signin",
+			"editor-container",
+			"section-to-print",
+			"raven",
+			"//",
+			"ng-quill",
+			"=>",
+			"c",
+			"edittingTitle",
+			"updateTitle",
+			"type",
+			"updateTitle",
+			"<md-input-container",
+			"/md-input-container",
+			"md-input-container",
+			",",
+			"\n",
+			"e",
+			"p",
+			"ngtable",
+			"403",
+			"font-family",
+			"modal",
+			"font-size:",
+			"tooltip",
+			"material",
+			"from",
+			"ql-picker-item",
+			"buildpicker",
+			"ql-align",
+			"ql-align .ql-picker-label",
+			"ql-align.ql-picker .ql-picker-label",
+			"ql-align .ql-picker-label",
+			".ql-snow.ql-toolbar .ql-picker .ql-picker-label[data-value=\"left\"]",
+			".ql-snow.ql-toolbar .ql-format-button.ql-left, .ql-snow.ql-toolbar .ql-picker.ql-left .ql-picker-label, .ql-snow.ql-toolbar .ql-picker .ql-picker-label[data-value=\"left\"], .ql-snow.ql-toolbar .ql-picker .ql-picker-item[data-value=\"left\"]",
+			"iVBORw0KGgoAAAANSUhEUgAAABIAAAASBAMAAACk4JNkAAAAKlBMVEUAAABJSUlAQEBERERFRUVERERERERERERERERFRUVEREREREREREREREQJcW6NAAAADXRSTlMAFRzExcbLzM",
+			".ql-snow.ql-toolbar .ql-picker .ql-picker-label",
+			"ql-size",
+			"ql-custom-button",
+			"vi-",
+			"vi",
+			":hover",
+			"ql-list",
+			"SettingsmodalCtrl",
+			"newProject",
+			"a:hover",
+			"transi",
+			"html",
+			"app.js",
+			"server",
+			"font",
+			"components/v",
+			"project",
+			"13",
+			"ENTER",
+			"13",
+			"header",
+			"font",
+			"table",
+			"60px",
+			"$scope.chapters",
+			"projectTitle",
+			"save",
+			"font-family",
+			"font",
+			"newproj",
+			"ql-picker",
+			"ql-align",
+			"ql-picker",
+			"ql-align",
+			"black",
+			"navbar",
+			"modal-body",
+			"ng-scope",
+			"font",
+			"toolt",
+			"\\fs23",
+			"\\f2",
+			"\\plain",
+			"\\emdash",
+			"\\",
+			"\\par",
+			"\\tab",
+			"css",
+			"tab",
+			"assets",
+			"ql-snow.ql-toolbar .ql-picker .ql-picker-label",
+			"wrapper",
+			"ql-toolbar",
+			"ql-align",
+			"bold",
+			".ql-snow.ql-toolbar .ql-picker",
+			"body",
+			"ql-picker-label",
+			"ql-bold:hover",
+			"ql-picker-label",
+			"ql-format-group",
+			"navbar",
+			"body",
+			"ng-q",
+			"ngqui",
+			"orange",
+			"ngquill",
+			".orange",
+			"orange",
+			"\"",
+			"dev_push",
+			"98126980003",
+			"AIzaSyAT-F225KRSO1ELQGygZ-Xs4qvBzXCgcus",
+			"api_key",
+			"5e9d13ca",
+			"api_key",
+			"5e9d13ca"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"to-print",
+			"<md-input-container style=\"margin-bottom: 0\"",
+			"/md-input-container style=\"margin-bottom: 0\"",
+			"md-input-container style=\"margin-bottom: 0\"",
+			"','",
+			",",
+			"vi-button",
+			"ql-custom-button vi-",
+			"ql-button vi",
+			"default",
+			"",
+			"'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "client/app/shareView/shareView.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								813,
+								813
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/shareView/shareView.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								776,
+								776
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "server/api/chapter/chapter.controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8058,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5766,
+								5766
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3245.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "volta.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"header.th",
+				"client/components/header/header.html"
+			],
+			[
+				"dashb",
+				"client/app/dashboard/dashboard.html"
+			],
+			[
+				"projecsctr",
+				"client/app/dashboard/projects/projects.controller.js"
+			],
+			[
+				"projectr",
+				"server/api/project/project.controller.js"
+			],
+			[
+				"dashctr",
+				"client/app/dashboard/dashboard.controller.js"
+			],
+			[
+				"projecthtm",
+				"client/app/dashboard/projects/projects.html"
+			],
+			[
+				"projdas",
+				"client/app/dashboard/projects/projectdashboard/projectdashboard.html"
+			],
+			[
+				"dashht",
+				"client/app/dashboard/dashboard.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/dev/web/HAH-PropertyListing/HAH-PropertyListing.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 303.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

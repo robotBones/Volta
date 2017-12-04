@@ -1,0 +1,1123 @@
+@import '../bower_components/bootstrap/less/bootstrap.less';
+@import '../bower_components/font-awesome/less/font-awesome.less';
+@icon-font-path: '../bower_components/bootstrap/fonts/';
+@fa-font-path: '../bower_components/font-awesome/fonts';
+
+/**
+ * App-wide Styles
+ */
+
+*,
+*:focus,
+*:active {
+    outline: none !important;
+}
+
+.ql-picker-label {
+    background: transparent;
+}
+
+button.list-group-item {
+    width: 100%;
+    color: #000;
+    text-align: left;
+}
+
+button.selected {
+    background-color: #ddd;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#editTitleText {
+    line-height: 1;
+    width: 100%;
+}
+
+.drop-box {
+    background: #F8F8F8;
+    border: 5px dashed #DDD;
+    width: 200px;
+    height: 65px;
+    text-align: center;
+    padding-top: 25px;
+    margin: 10px;
+}
+
+.dragover {
+    border: 5px dashed blue;
+}
+
+// injector
+@import 'account/forgot-pass/forgot-pass.less';
+@import 'account/reset-pass/reset-pass.less';
+@import 'admin/admin.less';
+@import 'analytics/analytics.less';
+@import 'dashboard/dashboard.less';
+@import 'dashboard/editdocument/editdocument.less';
+@import 'dashboard/modals/modals.less';
+@import 'dashboard/projects/projectdashboard/projectdashboard.less';
+@import 'dashboard/projects/projects.less';
+@import 'dashboard/quill.snow.less';
+@import 'dashboard/redirect/redirect.less';
+@import 'dashboard/verifyEmail/verifyEmail.less';
+@import 'garbage/garbage.less';
+@import 'main/main.less';
+@import 'shareView/shareView.less';
+@import '../components/footer/footer.less';
+@import '../components/header/header.less';
+@import '../components/modal/modal.less';
+@import '../components/navbar/navbar.less';
+@import '../components/sidebar/sidebar.less';
+@import '../components/signupnavbar/signupnavbar.less';
+// endinjector
+a {
+    cursor: pointer;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    color: #9c9999 !important;
+}
+
+.not-active:hover {
+    background: transparent;
+    color: #9c9999 !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background-color: #fafafa;
+}
+
+.dropdown-menu {
+    left: auto;
+    right: 30px;
+    min-width: 240px;
+    border-radius: 0px;
+    background-color: #fafafa;
+    li {
+        padding: 8px 0;
+        a:hover {
+            color: #2ecc71;
+        }
+        a {
+            color: #333333;
+        }
+    }
+    .list-in-dropdown {
+        list-style: outside none none;
+        padding-left: 20px;
+    }
+}
+
+
+
+h1 {
+    font-size: 20px;
+}
+
+#editorbottom h3 {
+    margin: 0px
+}
+
+.ql-editor {
+    height: 73vh;
+}
+
+input.title {
+    margin: 0px;
+    margin-top: 0;
+}
+
+#content-container,
+#editorbottom {
+    transition: all 0.5s ease;
+}
+
+.nav-toggled {
+    margin-top: -68px;
+}
+
+.editor-toggled {
+    height: 90vh;
+}
+
+.bottom-toggled {
+    position: fixed;
+    bottom: -200px;
+    width: 100%;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #222 inset !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+.ql-toolbar {
+    height: 68px !important;
+}
+
+md-toast.md-right {
+    z-index: 9999999;
+    top: 60px;
+}
+
+
+/* Voltacons */
+
+@font-face {
+    font-family: 'voltacons';
+    src: url('../assets/font/voltacons.eot?64613865');
+    src: url('../assets/font/voltacons.eot?64613865#iefix') format('embedded-opentype'), url('../assets/font/voltacons.woff?64613865') format('woff'), url('../assets/font/voltacons.ttf?64613865') format('truetype'), url('../assets/font/voltacons.svg?64613865#voltacons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'voltacons';
+    src: url('../font/voltacons.svg?64613865#voltacons') format('svg');
+  }
+}
+*/
+
+[class^="vi-"]:before,
+[class*=" vi-"]:before {
+    font-family: "voltacons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.vi-plus:before {
+    content: '\e800';
+}
+
+
+/* '' */
+
+.vi-link:before {
+    content: '\e801';
+}
+
+
+/* '' */
+
+.vi-unlink:before {
+    content: '\e802';
+}
+
+
+/* '' */
+
+.vi-ok:before {
+    content: '\e803';
+}
+
+
+/* '' */
+
+.vi-cancel:before {
+    content: '\e804';
+}
+
+
+/* '' */
+
+.vi-reply:before {
+    content: '\e805';
+}
+
+
+/* '' */
+
+.vi-forward:before {
+    content: '\e806';
+}
+
+
+/* '' */
+
+.vi-quote-left:before {
+    content: '\e807';
+}
+
+
+/* '' */
+
+.vi-quote-right:before {
+    content: '\e808';
+}
+
+
+/* '' */
+
+.vi-share:before {
+    content: '\e809';
+}
+
+
+/* '' */
+
+.vi-info:before {
+    content: '\e80a';
+}
+
+
+/* '' */
+
+.vi-info-circled:before {
+    content: '\e80b';
+}
+
+
+/* '' */
+
+.vi-help-circled:before {
+    content: '\e80c';
+}
+
+
+/* '' */
+
+.vi-help:before {
+    content: '\e80d';
+}
+
+
+/* '' */
+
+.vi-download-cloud:before {
+    content: '\e80e';
+}
+
+
+/* '' */
+
+.vi-upload-cloud:before {
+    content: '\e80f';
+}
+
+
+/* '' */
+
+.vi-print:before {
+    content: '\e810';
+}
+
+
+/* '' */
+
+.vi-doc:before {
+    content: '\e811';
+}
+
+
+/* '' */
+
+.vi-docs:before {
+    content: '\e812';
+}
+
+
+/* '' */
+
+.vi-doc-inv:before {
+    content: '\e813';
+}
+
+
+/* '' */
+
+.vi-folder:before {
+    content: '\e814';
+}
+
+
+/* '' */
+
+.vi-folder-open:before {
+    content: '\e815';
+}
+
+
+/* '' */
+
+.vi-folder-empty:before {
+    content: '\e816';
+}
+
+
+/* '' */
+
+.vi-folder-open-empty:before {
+    content: '\e817';
+}
+
+
+/* '' */
+
+.vi-menu:before {
+    content: '\e818';
+}
+
+
+/* '' */
+
+.vi-attach:before {
+    content: '\e819';
+}
+
+
+/* '' */
+
+.vi-lock:before {
+    content: '\e81a';
+}
+
+
+/* '' */
+
+.vi-lock-open:before {
+    content: '\e81b';
+}
+
+
+/* '' */
+
+.vi-resize-full:before {
+    content: '\e81c';
+}
+
+
+/* '' */
+
+.vi-resize-small:before {
+    content: '\e81d';
+}
+
+
+/* '' */
+
+.vi-picture:before {
+    content: '\e81e';
+}
+
+
+/* '' */
+
+.vi-lock-open-alt:before {
+    content: '\e81f';
+}
+
+
+/* '' */
+
+.vi-cog:before {
+    content: '\e820';
+}
+
+
+/* '' */
+
+.vi-down-dir:before {
+    content: '\e821';
+}
+
+
+/* '' */
+
+.vi-up-dir:before {
+    content: '\e822';
+}
+
+
+/* '' */
+
+.vi-left-dir:before {
+    content: '\e823';
+}
+
+
+/* '' */
+
+.vi-right-dir:before {
+    content: '\e824';
+}
+
+
+/* '' */
+
+.vi-down-open:before {
+    content: '\e825';
+}
+
+
+/* '' */
+
+.vi-left-open:before {
+    content: '\e826';
+}
+
+
+/* '' */
+
+.vi-right-open:before {
+    content: '\e827';
+}
+
+
+/* '' */
+
+.vi-up-open:before {
+    content: '\e828';
+}
+
+
+/* '' */
+
+.vi-angle-left:before {
+    content: '\e829';
+}
+
+
+/* '' */
+
+.vi-angle-right:before {
+    content: '\e82a';
+}
+
+
+/* '' */
+
+.vi-angle-up:before {
+    content: '\e82b';
+}
+
+
+/* '' */
+
+.vi-angle-down:before {
+    content: '\e82c';
+}
+
+
+/* '' */
+
+.vi-download:before {
+    content: '\e82d';
+}
+
+
+/* '' */
+
+.vi-user:before {
+    content: '\e82e';
+}
+
+
+/* '' */
+
+.vi-user-plus:before {
+    content: '\e82f';
+}
+
+
+/* '' */
+
+.vi-ellipsis:before {
+    content: '\e830';
+}
+
+
+/* '' */
+
+.vi-ellipsis-vert:before {
+    content: '\e831';
+}
+
+
+/* '' */
+
+.vi-off:before {
+    content: '\e832';
+}
+
+
+/* '' */
+
+.vi-paste:before {
+    content: '\e833';
+}
+
+
+/* '' */
+
+.vi-list-numbered:before {
+    content: '\e834';
+}
+
+
+/* '' */
+
+.vi-list-bullet:before {
+    content: '\e835';
+}
+
+
+/* '' */
+
+.vi-mail-alt:before {
+    content: '\e836';
+}
+
+
+/* '' */
+
+.vi-mail:before {
+    content: '\e837';
+}
+
+
+/* '' */
+
+.vi-add:before {
+    content: '\e838';
+}
+
+
+/* '' */
+
+.vi-bookmark-open:before {
+    content: '\e839';
+}
+
+
+/* '' */
+
+.vi-bookmark:before {
+    content: '\e83a';
+}
+
+
+/* '' */
+
+.vi-checkbox-empty:before {
+    content: '\e83b';
+}
+
+
+/* '' */
+
+.vi-checkbox:before {
+    content: '\e83c';
+}
+
+
+/* '' */
+
+.vi-search:before {
+    content: '\e83d';
+}
+
+
+/* '' */
+
+.vi-close-circle:before {
+    content: '\e83e';
+}
+
+
+/* '' */
+
+.vi-close:before {
+    content: '\e83f';
+}
+
+
+/* '' */
+
+.vi-cloud-download:before {
+    content: '\e840';
+}
+
+
+/* '' */
+
+.vi-cloud-upload:before {
+    content: '\e841';
+}
+
+
+/* '' */
+
+.vi-attach-file:before {
+    content: '\e842';
+}
+
+
+/* '' */
+
+.vi-copyright:before {
+    content: '\e843';
+}
+
+
+/* '' */
+
+.vi-format-bold:before {
+    content: '\e844';
+}
+
+
+/* '' */
+
+.vi-format-italic:before {
+    content: '\e845';
+}
+
+
+/* '' */
+
+.vi-format-list-bullet:before {
+    content: '\e846';
+}
+
+
+/* '' */
+
+.vi-format-list-numbered:before {
+    content: '\e847';
+}
+
+
+/* '' */
+
+.vi-format-strike:before {
+    content: '\e848';
+}
+
+
+/* '' */
+
+.vi-format-underline:before {
+    content: '\e849';
+}
+
+
+/* '' */
+
+.vi-fullscreen:before {
+    content: '\e84a';
+}
+
+
+/* '' */
+
+.vi-heart-empty:before {
+    content: '\e84b';
+}
+
+
+/* '' */
+
+.vi-heart:before {
+    content: '\e84c';
+}
+
+
+/* '' */
+
+.vi-hourglass-empty:before {
+    content: '\e84d';
+}
+
+
+/* '' */
+
+.vi-hourglass:before {
+    content: '\e84e';
+}
+
+
+/* '' */
+
+.vi-house:before {
+    content: '\e84f';
+}
+
+
+/* '' */
+
+.vi-iphone:before {
+    content: '\e850';
+}
+
+
+/* '' */
+
+.vi-more-vert:before {
+    content: '\e851';
+}
+
+
+/* '' */
+
+.vi-palette:before {
+    content: '\e852';
+}
+
+
+/* '' */
+
+.vi-pencil:before {
+    content: '\e853';
+}
+
+
+/* '' */
+
+.vi-scisscors:before {
+    content: '\e854';
+}
+
+
+/* '' */
+
+.vi-screen:before {
+    content: '\e855';
+}
+
+
+/* '' */
+
+.vi-shopping-cart:before {
+    content: '\e856';
+}
+
+
+/* '' */
+
+.vi-spellcheck:before {
+    content: '\e857';
+}
+
+
+/* '' */
+
+.vi-suitcase:before {
+    content: '\e858';
+}
+
+
+/* '' */
+
+.vi-tablet-mac:before {
+    content: '\e859';
+}
+
+
+/* '' */
+
+.vi-tag:before {
+    content: '\e85a';
+}
+
+
+/* '' */
+
+.vi-at:before {
+    content: '\e85b';
+}
+
+
+/* '' */
+
+.vi-facebook:before {
+    content: '\e85c';
+}
+
+
+/* '' */
+
+.vi-facebook-squared:before {
+    content: '\e85d';
+}
+
+
+/* '' */
+
+.vi-gplus:before {
+    content: '\e85e';
+}
+
+
+/* '' */
+
+.vi-linkedin:before {
+    content: '\e85f';
+}
+
+
+/* '' */
+
+.vi-linkedin-squared:before {
+    content: '\e860';
+}
+
+
+/* '' */
+
+.vi-paypal:before {
+    content: '\e861';
+}
+
+
+/* '' */
+
+.vi-tumblr:before {
+    content: '\e862';
+}
+
+
+/* '' */
+
+.vi-tumblr-squared:before {
+    content: '\e863';
+}
+
+
+/* '' */
+
+.vi-medium:before {
+    content: '\e864';
+}
+
+
+/* '' */
+
+.vi-slack:before {
+    content: '\e865';
+}
+
+
+/* '' */
+
+.vi-twitter:before {
+    content: '\e866';
+}
+
+
+/* '' */
+
+.vi-twitter-squared:before {
+    content: '\e867';
+}
+
+
+/* '' */
+
+.vi-reorder:before {
+    content: '\e868';
+}
+
+
+/* '' */
+
+.vi-pin:before {
+    content: '\e869';
+}
+
+
+/* '' */
+
+.vi-publications:before {
+    content: '\e86a';
+}
+
+
+/* '' */
+
+.vi-book-bw:before {
+    content: '\e86b';
+}
+
+
+/* '' */
+
+.vi-dashboard:before {
+    content: '\e86c';
+}
+
+
+/* '' */
+
+.vi-cloud-upload-1:before {
+    content: '\e86d';
+}
+
+
+/* '' */
+
+.vi-lightbulb:before {
+    content: '\e86e';
+}
+
+
+/* '' */
+
+.vi-highlighter:before {
+    content: '\e86f';
+}
+
+
+/* '' */
+
+.vi-alignment-center:before {
+    content: '\e870';
+}
+
+
+/* '' */
+
+.vi-alignment-justified:before {
+    content: '\e871';
+}
+
+
+/* '' */
+
+.vi-alignment-right:before {
+    content: '\e872';
+}
+
+
+/* '' */
+
+.vi-alignment-left:before {
+    content: '\e873';
+}
+
+
+/* '' */
+
+.vi-floppy:before {
+    content: '\e874';
+}
+
+
+/* '' */
+
+.vi-eye:before {
+    content: '\e875';
+}
+
+
+/* '' */
+
+.vi-eye-off:before {
+    content: '\e876';
+}
+
+
+/* '' */
+
+.vi-upload:before {
+    content: '\e877';
+}
+
+
+/* '' */
+
+.vi-spinner:before {
+    content: '\e878';
+}
+
+
+/* '' */
+
+.vi-arrow-combo:before {
+    content: '\e879';
+}
+
+
+/* '' */
+
+.vi-sticky-note:before {
+    content: '\e87a';
+}
+
+
+/* '' */
+
+.vi-info-circled-italic:before {
+    content: '\e87b';
+}
+
+
+/* '' */
+
+.vi-smile:before {
+    content: '\e87c';
+}
+
+
+/* '' */
+
+.vi-garbage:before {
+    content: '\e87d';
+}
+
+
+/* '' */
+
+.vi-folders:before {
+    content: '\e87e';
+}
+
+
+/* '' */

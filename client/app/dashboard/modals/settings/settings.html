@@ -1,0 +1,55 @@
+<div class="modal-header">
+	<h3 id="navModalHead" class="modal-title">My Settings</h3>
+	<span flex></span>
+	<md-button class="md-icon-button modal-close" ng-click="cancel()">
+		<md-icon class="fa fa-times" aria-label="Close dialog"></md-icon>
+	</md-button>
+</div>
+<form class="form-horizontal">
+	<div class="modal-body">
+		<div class="">
+			<div class="col-sm-12">
+				<md-input-container style="margin-bottom: 0" id="modal" class="md-block flex-gt-sm">
+					<label>First Name</label>
+					<input ng-change="profileDirty = true" type="text" ng-model="user.firstName">
+				</md-input-container>
+			</div>
+		</div>
+		<div class="">
+			<div class="col-sm-12">
+				<md-input-container style="margin-bottom: 0" id="modal" class="md-block flex-gt-sm">
+					<label>Last Name</label>
+					<input ng-change="profileDirty = true" type="text" ng-model="user.lastName">
+				</md-input-container>
+			</div>
+		</div>
+		<div class="">
+			<div class="col-sm-12">
+				<md-input-container style="margin-bottom: 0" id="modal" class="md-block flex-gt-sm">
+					<label>Email</label>
+					<input ng-change="profileDirty = true" type="text" ng-model="user.email">
+				</md-input-container>
+			</div>
+		</div>
+		<div class="">
+			<div class="col-sm-12">
+				<md-input-container style="margin-bottom: 0" id="modal" class="md-block flex-gt-sm">
+					<label>Old Password</label>
+					<input type="password" ng-model="oldPassword">
+				</md-input-container>
+			</div>
+		</div>
+		<div class="">
+			<div class="col-sm-12">
+				<md-input-container style="margin-bottom: 0" id="modal" class="md-block flex-gt-sm">
+					<label>New Password</label>
+					<input ng-change="passwordDirty = true" type="password" ng-model="newPassword">
+				</md-input-container>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button style="margin-top: 18px;" class="btn btn-lg btn-close" ng-click="cancel()">Cancel</button>
+		<button style="margin-top: 18px;" class="btn btn-lg" ng-click="updateChanges()">Save</button>
+	</div>
+</form>

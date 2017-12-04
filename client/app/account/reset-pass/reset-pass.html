@@ -1,0 +1,47 @@
+<signupnavbar></signupnavbar>
+<div class="container">
+    <div class="row" style="margin-top:20px">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="text-center" style="padding-bottom:20px;">
+                <h2>Volta Password Reset</h2>
+                <h3>"If you want to tell people the truth, make them laugh. Otherwise they'll kill you."</h3>
+                <p class="quote-owner">~Oscar Wilde</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+            <form role="form" name="form" ng-submit="send(form)" novalidate>
+                <fieldset>
+                    <div class="form-group">
+                        <md-input-container class="md-block flex-gt-sm">
+                            <label>Temporary Password</label>
+                            <input type="password" ng-model="data.temp" required>
+                        </md-input-container>
+                        <md-input-container class="md-block flex-gt-sm">
+                            <label>New Password</label>
+                            <input type="password" ng-model="data.newPass" required>
+                        </md-input-container>
+                        <md-input-container class="md-block flex-gt-sm">
+                            <label>Confirm Password</label>
+                            <input type="password" ng-model="data.confirm" required>
+                        </md-input-container>
+                        <!-- <input type="email" placeholder="Email or Username" name="email" class="form-control input-lg" ng-model="user.email" required> -->
+                    </div>
+                    <div class="form-group has-error">
+                        <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+                            Please enter your email.
+                        </p>
+                        <p class="help-block" ng-show="form.email.$error.email && submitted">
+                            Please enter a valid email.
+                        </p>
+                        <p class="help-block">{{ errors.other }}</p>
+                        <span>
+              <!-- <a href="/login" class="forgotLink pull-left">Wait, wait! I remember!</a> -->
+              <button class="btn btn-primary btn-lg btn-signin pull-right" type="submit">
+                Reset
+              </button>
+            </span>
+                </fieldset>
+            </form>
+            </div>
+        </div>
+    </div>

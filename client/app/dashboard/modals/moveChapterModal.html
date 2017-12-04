@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="ok()" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h3 id="navModalHead" class="modal-title">Move to...</h3>
+</div>
+<div class="modal-body" id="modalBody">
+    <ul id="modalNav" class="nav nav-stacked">
+        <li>
+            <a href="" ng-click="newProject()"><i class="fa fa-plus"></i> New Project</a>
+        </li>
+    </ul>
+    <md-divider></md-divider>
+    <ul id="modalNav" class="nav nav-stacked scrollable-nav">
+        <li ng-repeat="project in projects">
+            <a href="" ng-click="addToProject(chapterId, project._id)"><i class="glyphicon glyphicon-book"></i> {{project.title}}</a>
+        </li>
+    </ul>
+    <md-divider></md-divider>
+    <ul id="modalNav" class="nav nav-stacked">
+        <li>
+            <a href="" ng-click="deleteChapter(chapterId)"><i class="fa fa-trash"></i> Garbage</a>
+        </li>
+    </ul>
+    <md-divider></md-divider>
+</div>
+<div class="modal-footer" style="border-top:0">
+    <button class="pull-left btn btn-default" type="button" ng-click="ok()">Cancel</button>
+</div>

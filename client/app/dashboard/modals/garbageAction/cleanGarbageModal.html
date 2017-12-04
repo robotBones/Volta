@@ -1,0 +1,18 @@
+<div class="modal-header">
+    <h3 id="navModalHead" class="modal-title">Empty Garbage</h3>
+    <span flex></span>
+    <md-button class="md-icon-button modal-close" ng-click="cancel()">
+        <md-icon class="fa fa-times" aria-label="Close dialog"></md-icon>
+    </md-button>
+</div>
+<div class="modal-body" style="color: #000">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>This action cannot be undone. Are you sure?</p>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-lg btn-close" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-lg" ng-click="empty()">Yes</button>
+</div>

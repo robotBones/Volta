@@ -1,0 +1,36 @@
+<div id="header-wrapper" ng-class="{'show': showVerifyMessage}">
+	<div class="row verify-message" ng-class="{'show': showVerifyMessage}">
+		<p>Your account is not verified. Please check your email for verification link or click
+			<a ng-click="sendLink()" style="color: #2ecc71">here</a>.
+			<a ng-click="closeMessage()">
+				<i style="float: right; padding-right: 10px; color: #949494" class="vi-close"></i>
+			</a>
+		</p>
+	</div>
+	<div class="row" style="margin: 0px;">
+		<ul>
+			<li>
+				<div class="search">
+					<input ng-show="opened" placeholder="Search by title or text" focus-if="opened" focus-delay="100" type="text" ng-model="query">
+					<a ng-click="toggleSearch()">
+						<i ng-class="{'vi-search': opened === false, 'vi-close': opened === true}"></i>
+						<md-tooltip md-direction="bottom">Search</md-tooltip>
+					</a>
+				</div>
+			</li>
+			<!-- <li><a class="not-active"><i class="vi-publications"></i><md-tooltip md-direction="bottom">Publications - Coming Soon</md-tooltip></a></li> -->
+			<li>
+				<a ng-click="settings()">
+					<i class="vi-user"></i>
+					<md-tooltip md-direction="bottom">User Settings</md-tooltip>
+				</a>
+			</li>
+			<li>
+				<a href="/logout" style="padding-right: 58px;">
+					<i class="vi-off"></i>
+					<md-tooltip md-direction="bottom">Logout</md-tooltip>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
